@@ -14,6 +14,9 @@ func Help(templateFS embed.FS) error {
 
 	cmd.AddCommand(
 		GenCommand(templateFS),
+		ListCommand(templateFS),
+		UpdateCommand(templateFS),
+		CleanCommand(templateFS),
 	)
 
 	return cmd.Execute()
